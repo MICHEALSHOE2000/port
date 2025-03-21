@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <style>
-        * {
+      * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -24,30 +24,73 @@
             text-align: center;
             padding: 20px 10px;
         }
-        nav ul {
+
+        /* Navigation */
+        .nav-container {
+            background: #003366;
+            position: relative;
+        }
+
+        .nav-links {
             display: flex;
             justify-content: center;
             padding: 10px;
             list-style: none;
-            background: #003366;
         }
-        nav ul li {
+        .nav-links li {
             margin: 0 15px;
         }
-        nav ul li a {
+        .nav-links li a {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
-        nav ul li a:hover {
+        .nav-links li a:hover {
             text-decoration: underline;
         }
+
+        /* Hamburger Menu */
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                width: 100%;
+                top: 50px;
+                left: 0;
+                background: #003366;
+                text-align: center;
+                padding: 10px 0;
+            }
+            .nav-links li {
+                padding: 10px 0;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+        }
+
+        /* Container */
         .container {
             width: 90%;
             max-width: 1100px;
             margin: auto;
             padding: 20px 0;
         }
+
         section {
             background: white;
             padding: 30px;
@@ -67,7 +110,7 @@
             padding: 10px;
             border-radius: 5px;
         }
-        .metrics-container {
+          .metrics-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
