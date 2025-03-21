@@ -24,24 +24,72 @@
             text-align: center;
             padding: 20px 10px;
         }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            padding: 10px;
-            list-style: none;
-            background: #003366;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
+     nav {
+    position: relative;
+    background: #003366;
+    padding: 10px;
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show menu button */
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background: #003366;
+        position: absolute;
+        left: 0;
+        top: 50px; /* Position below the button */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show when toggled */
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+}
+
         .container {
             width: 90%;
             max-width: 1100px;
@@ -222,14 +270,14 @@ ul li::before {
     </header>
     
     <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
+    <button class="menu-toggle">☰ Menu</button>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
