@@ -115,6 +115,103 @@
             .metric {
                 width: 80%;
             }
+/* Case Study Section */
+.case-study {
+    padding: 60px 20px;
+    background: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1d3557;
+    margin-bottom: 20px;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e63946;
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Paragraphs & Lists */
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: left;
+}
+
+ul {
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 8px 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+ul li::before {
+    content: "✔️";
+    margin-right: 10px;
+    color: #2a9d8f;
+    font-size: 1.2rem;
+}
+
+/* CTA Button */
+.cta {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #1d3557;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: #457b9d;
+}
+
+/* Highlighted Text */
+.highlight {
+    color: #e63946;
+    font-weight: bold;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
         }
     </style>
 </head>
@@ -150,10 +247,47 @@
             </ul>
         </section>
     
-        <section id="portfolio">
-            <h2>Portfolio & Case Studies</h2>
-            <p>Check out successful campaigns and case studies...</p>
-        </section>
+<section class="case-study">
+        <div class="container">
+            <h2 class="fade-in">🚀 Case Study: How I Scaled a Supplement Brand’s Sales by Over 10X</h2>
+
+            <div class="challenge">
+                <h3 class="section-title">⚡ The Challenge:</h3>
+                <p>A supplement brand with no online presence wanted to scale its sales but had no website, customer acquisition strategy, or digital marketing system. They needed a fast, effective solution to generate consistent sales and build a loyal customer base.</p>
+            </div>
+
+            <div class="strategy">
+                <h3 class="section-title">🎯 The Strategy:</h3>
+                <p>I developed a high-converting website and ran laser-targeted ads, focusing only on ready-to-buy customers. This approach skyrocketed sales by over <b>300%</b> in a short time. The client was thrilled, but I noticed a major flaw—<span class="highlight">we were losing a massive number of potential buyers who weren’t ready to purchase immediately.</span></p>
+                <p>To plug this revenue leak, I implemented a <b>strategic bridge page</b> with an irresistible lead magnet—an exclusive <b>ebook</b> offered in exchange for their email addresses.</p>
+            </div>
+
+            <div class="optimization">
+                <h3 class="section-title">🔥 The Game-Changing Optimization:</h3>
+                <ul>
+                    <li><b>Retargeting Mastery:</b> Instead of losing potential buyers, I redirected them back to the landing page with a powerful follow-up system.</li>
+                    <li><b>Lead Nurturing:</b> We built an automated email sequence to educate, engage, and convert these leads over time.</li>
+                    <li><b>Sales Acceleration:</b> This hybrid approach <span class="highlight">not only captured leads but also turned hesitant buyers into loyal customers</span>, driving sales from <b>3X to over 10X growth!</b></li>
+                </ul>
+            </div>
+
+            <div class="results">
+                <h3 class="section-title">🏆 The Results:</h3>
+                <ul>
+                    <li>✅ <b>Explosive Revenue Growth</b> – Sales skyrocketed over <b>1000%</b> from the initial baseline.</li>
+                    <li>✅ <b>Lead Magnet Success</b> – A high-performing email list was built, fueling long-term sales.</li>
+                    <li>✅ <b>Maximum ROI</b> – Every advertising dollar spent now generated exponentially higher returns.</li>
+                </ul>
+                <p class="conclusion">The client went from <b>struggling to make sales online</b> to <span class="highlight">dominating their niche</span> with a high-converting system. What started as a simple ad campaign transformed into a <b>fully optimized sales machine</b>, delivering <b>insane results and unmatched profitability.</b></p>
+            </div>
+
+            <div class="cta">
+                <p>🚀 Ready to scale your business with high-converting ads & data-driven strategies?</p>
+                <a href="#contact" class="cta-button">Let’s Work Together</a>
+            </div>
+        </div>
+    </section>
+
     
         <section id="metrics">
             <h2>Success Metrics</h2>
