@@ -176,9 +176,12 @@
 }
 
 .case-study .container {
-    max-width: 100%;
+    max-width: 1200px;  /* Set a reasonable max-width */
+    width: 100%;
     margin: 0 auto;
+    padding: 0 20px; /* Ensure padding so content doesn’t touch edges */
 }
+
 
 .case-study h2 {
     font-size: 2.2rem;
@@ -203,20 +206,20 @@ p {
     text-align: left;
 }
 
-ul {
+.case-study ul {
     text-align: left;
     list-style: none;
     padding-left: 0;
 }
 
-ul li {
-    padding: 8px 0;
+.case-study ul li {
+    display: block; /* Change from flex to block for proper spacing */
+    padding: 12px 0;
     font-size: 1rem;
-    display: flex;
-    align-items: center;
 }
 
-ul li::before {
+
+.case-study ul li::before {
     margin-right: 10px;
     color: #2a9d8f;
     font-size: 1.2rem;
