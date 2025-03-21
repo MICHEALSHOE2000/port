@@ -61,6 +61,35 @@
         a:hover {
             text-decoration: underline;
         }
+        button {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .metrics-container {
+            display: flex;
+            justify-content: space-around;
+        }
+        .metric {
+            text-align: center;
+            padding: 10px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -70,7 +99,6 @@
         <h1>🚀 I Help Businesses Scale with High-Converting Ads & Sales Funnels</h1>
         <p>Maximize Your ROI with Data-Driven Marketing Strategies.</p>
             <ul>
-                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -99,7 +127,78 @@
         <h2>Portfolio & Case Studies</h2>
         <p>Examples of successful campaigns and case studies...</p>
     </section>
+     <header>
+        <h1>Online Ad Expert in Lagos</h1>
+        <p>Convert Your Ad Budget into Profit, Simple.</p>
+        <button id="startButton">Let's Do It</button>
+        <p>or call <a href="tel:+2348103188746">08103188746</a></p>
+    </header>
     
+    <section id="why-ads">
+        <h2>Why You Should Consider Paid Ads</h2>
+        <ul>
+            <li>Organic Social Media reach is declining.</li>
+            <li>Paid Ads help you get more attention for your business.</li>
+            <li>Online paid Ads are Affordable and measurable.</li>
+            <li>Target people based on demographics and interests.</li>
+        </ul>
+    </section>
+    
+    <section id="metrics">
+        <h2>Successful Ads are Measured by:</h2>
+        <div class="metrics-container">
+            <div class="metric">
+                <h3>Website Traffic</h3>
+                <p>Traffic Ads drive visitors to your website.</p>
+            </div>
+            <div class="metric">
+                <h3>Leads & Messages</h3>
+                <p>Conversion starts with a message from an interested person.</p>
+            </div>
+            <div class="metric">
+                <h3>Brand Engagement</h3>
+                <p>Likes, Comments, Profile views validate your brand.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="case-study">
+        <h2>Case Study</h2>
+        <p>BlackWatch NG is a small watch vendor in Lagos. We used Facebook Ads to boost engagement and sales.</p>
+        <blockquote>
+            "To be honest, I was not expecting any result in the first month, this is amazing. Online ads work!"
+            <cite>- Lara, CEO, BlackWatchNG</cite>
+        </blockquote>
+    </section>
+    
+    <section id="pricing">
+        <h2>How Much Do Online Ads Cost in Nigeria (2024)?</h2>
+        <p>Minimum ad budget for Facebook Ads: ₦30,000</p>
+        <p>Minimum ad budget for Google Ads: $10 per day</p>
+        <p>My charges:</p>
+        <ul>
+            <li>40% for ₦30,000 - ₦199,999</li>
+            <li>30% for ₦200,000 - ₦499,999</li>
+            <li>20% for ₦500,000 - ₦999,999</li>
+            <li>15% for anything beyond that.</li>
+        </ul>
+    </section>
+    
+    <footer>
+        <h2>Let's Get Started</h2>
+        <p>Contact Me:</p>
+        <ul>
+            <li>Email: <a href="mailto:adreintomicheal6@gmail.com">adreintomicheal6@gmail.com</a></li>
+            <li>Phone: <a href="tel:+2347086865133">+234 708 686 5133</a></li>
+            <li>Follow me: <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">YouTube</a></li>
+        </ul>
+    </footer>
+    
+    <script>
+        document.getElementById("startButton").addEventListener("click", function() {
+            alert("Let's get started with your online ads!");
+        });
+    </script>
     <section id="contact">
         <h2>Let's Connect</h2>
         <p>Email: <a href="mailto:adreintomicheal6@gmail.com">adreintomicheal6@gmail.com</a></p>
