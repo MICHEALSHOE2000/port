@@ -3,63 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Babatunde Aderinto - Digital Marketing Portfolio</title>
+    <title>Michael Babatunde Aderinto - Digital Marketing Expert</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f9f9f9;
             color: #333;
+            line-height: 1.6;
         }
         header {
-            background: #0073e6;
+            background: #004a99;
             color: white;
-            padding: 15px 0;
             text-align: center;
+            padding: 20px 10px;
         }
         nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
             list-style: none;
-            padding: 0;
+            background: #003366;
         }
         nav ul li {
-            display: inline;
             margin: 0 15px;
         }
         nav ul li a {
-            color: blue;
+            color: white;
             text-decoration: none;
             font-weight: bold;
         }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px 0;
+        }
         section {
-            padding: 40px;
-            text-align: center;
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         h2 {
-            color: #0073e6;
+            color: #004a99;
         }
         ul {
             list-style: none;
-            padding: 0;
         }
         ul li {
-            background: white;
-            color:blue;
-            margin: 10px auto;
-            padding: 15px;
-            max-width: 600px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #e3f2fd;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
         }
-        a {
-            color: #0073e6;
-            text-decoration: none;
-            font-weight: bold;
+        .metrics-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
-        a:hover {
-            text-decoration: underline;
+        .metric {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1 1 30%;
+            margin: 10px;
         }
         button {
             background: #ff6600;
@@ -67,161 +86,99 @@
             border: none;
             padding: 10px 20px;
             cursor: pointer;
-        }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background: white;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .metrics-container {
-            display: flex;
-            justify-content: space-around;
-        }
-        .metric {
-            text-align: center;
-            padding: 10px;
+        button:hover {
+            background: #cc5200;
         }
         footer {
-            background: #333;
+            background: #003366;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             margin-top: 20px;
+        }
+        .contact-links a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            .metrics-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .metric {
+                width: 80%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-             <header>
-        <h1>🚀 I Help Businesses Scale with High-Converting Ads & Sales Funnels</h1>
-        <p>Maximize Your ROI with Data-Driven Marketing Strategies.</p>
+        <h1>🚀 Scale Your Business with High-Converting Ads</h1>
+        <p>Maximize ROI with Data-Driven Digital Marketing Strategies</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I’m Michael Babatunde Aderinto, a digital marketing expert specializing in Google Ads, Facebook Ads, and sales funnel optimization. With 3+ years of experience, I help businesses scale profitably.</p>
+        </section>
+    
+        <section id="skills">
+            <h2>Key Skills</h2>
             <ul>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>✅ Google & Facebook Ads</li>
+                <li>✅ Sales Funnel Optimization</li>
+                <li>✅ Data Analytics & Performance Tracking</li>
+                <li>✅ Conversion Optimization</li>
+                <li>✅ Persuasive Copywriting</li>
             </ul>
-        </nav>
-    </header>
+        </section>
     
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I’m Michael Babatunde Aderinto, a digital marketing expert specializing in Google Ads, Facebook Ads, and sales funnel optimization
-            with a background in Industrial Chemistry and 3+ years of experience in performance marketing, lead generation, and conversion optimization..</p>
-    </section>
+        <section id="portfolio">
+            <h2>Portfolio & Case Studies</h2>
+            <p>Check out successful campaigns and case studies...</p>
+        </section>
     
-    <section id="skills">
-        <h2>Key Skills</h2>
-        <ul>
-            <li>✅Google Ads, Facebook & Instagram Ads</li>
-            <li>✅Sales Funnel Optimization</li>
-            <li>✅Data Analytics & Performance Tracking</li>
-            <li>✅Conversion Optimization</li>
-            <li>✅Customer Psychology & Persuasive Copywriting</li>
-        </ul>
-    </section>
-    
-    <section id="portfolio">
-        <h2>Portfolio & Case Studies</h2>
-        <p>Examples of successful campaigns and case studies...</p>
-    </section>
-     <header>
-        <h1>Online Ad Expert in Lagos</h1>
-        <p>Convert Your Ad Budget into Profit, Simple.</p>
-        <button id="startButton">Let's Do It</button>
-        <p>or call <a href="tel:+2348103188746">08103188746</a></p>
-    </header>
-    
-    <section id="why-ads">
-        <h2>Why You Should Consider Paid Ads</h2>
-        <ul>
-            <li>Organic Social Media reach is declining.</li>
-            <li>Paid Ads help you get more attention for your business.</li>
-            <li>Online paid Ads are Affordable and measurable.</li>
-            <li>Target people based on demographics and interests.</li>
-        </ul>
-    </section>
-    
-    <section id="metrics">
-        <h2>Successful Ads are Measured by:</h2>
-        <div class="metrics-container">
-            <div class="metric">
-                <h3>Website Traffic</h3>
-                <p>Traffic Ads drive visitors to your website.</p>
+        <section id="metrics">
+            <h2>Success Metrics</h2>
+            <div class="metrics-container">
+                <div class="metric">
+                    <h3>Website Traffic</h3>
+                    <p>Drive high-quality visitors to your site.</p>
+                </div>
+                <div class="metric">
+                    <h3>Lead Generation</h3>
+                    <p>Convert prospects into customers.</p>
+                </div>
+                <div class="metric">
+                    <h3>Brand Engagement</h3>
+                    <p>Build authority & trust online.</p>
+                </div>
             </div>
-            <div class="metric">
-                <h3>Leads & Messages</h3>
-                <p>Conversion starts with a message from an interested person.</p>
-            </div>
-            <div class="metric">
-                <h3>Brand Engagement</h3>
-                <p>Likes, Comments, Profile views validate your brand.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="case-study">
-        <h2>Case Study</h2>
-        <p>BlackWatch NG is a small watch vendor in Lagos. We used Facebook Ads to boost engagement and sales.</p>
-        <blockquote>
-            "To be honest, I was not expecting any result in the first month, this is amazing. Online ads work!"
-            <cite>- Lara, CEO, BlackWatchNG</cite>
-        </blockquote>
-    </section>
-    
-    <section id="pricing">
-        <h2>How Much Do Online Ads Cost in Nigeria (2024)?</h2>
-        <p>Minimum ad budget for Facebook Ads: ₦30,000</p>
-        <p>Minimum ad budget for Google Ads: $10 per day</p>
-        <p>My charges:</p>
-        <ul>
-            <li>40% for ₦30,000 - ₦199,999</li>
-            <li>30% for ₦200,000 - ₦499,999</li>
-            <li>20% for ₦500,000 - ₦999,999</li>
-            <li>15% for anything beyond that.</li>
-        </ul>
-    </section>
+        </section>
+    </div>
     
     <footer>
-        <h2>Let's Get Started</h2>
-        <p>Contact Me:</p>
-        <ul>
-            <li>Email: <a href="mailto:adreintomicheal6@gmail.com">adreintomicheal6@gmail.com</a></li>
-            <li>Phone: <a href="tel:+2347086865133">+234 708 686 5133</a></li>
-            <li>Follow me: <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">YouTube</a></li>
-        </ul>
-    </footer>
-    
-    <script>
-        document.getElementById("startButton").addEventListener("click", function() {
-            alert("Let's get started with your online ads!");
-        });
-    </script>
-    <section id="contact">
         <h2>Let's Connect</h2>
-        <p>Email: <a href="mailto:adreintomicheal6@gmail.com">adreintomicheal6@gmail.com</a></p>
-        <p>WhatsApp: <a href="tel:+2347086865133">+234 708 686 5133</a></p>
-        <p>Website: <a href="http://www.michaeladerinto.com">www.michaeladerinto.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/michael-aderinto">linkedin.com/in/michael-aderinto</a></p>
-    </section>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const navLinks = document.querySelectorAll("nav ul li a");
-            navLinks.forEach(link => {
-                link.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    const targetId = this.getAttribute("href").substring(1);
-                    const targetSection = document.getElementById(targetId);
-                    window.scrollTo({
-                        top: targetSection.offsetTop - 50,
-                        behavior: "smooth"
-                    });
-                });
-            });
-        });
-    </script>
+        <p>Email: <a class="contact-links" href="mailto:adreintomicheal6@gmail.com">adreintomicheal6@gmail.com</a></p>
+        <p>Phone: <a class="contact-links" href="tel:+2347086865133">+234 708 686 5133</a></p>
+        <p>Follow me on <a class="contact-links" href="#">LinkedIn</a> | <a class="contact-links" href="#">Instagram</a> | <a class="contact-links" href="#">YouTube</a></p>
+    </footer>
 </body>
 </html>
