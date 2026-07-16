@@ -1,497 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Babatunde Aderinto - Digital Marketing Expert</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-   <script defer src="script.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            background: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-             overflow-x: hidden;
-        }
-        header {
-            background: #004a99;
-            color: white;
-            text-align: center;
-            padding: 20px 10px;
-        }
-     nav {
-    position: relative;
-    background: #003366;
-    padding: 10px;
-}
-img {
-            max-width: 100%; /* Ensures the image does not exceed the screen width */
-            height: auto; /* Maintains aspect ratio */
-            display: block; /* Prevents unwanted space below the image */
-            margin: auto; /* Centers the image */
-        }        
-.profile-img {
-    width: 150px; /* Adjust as needed */
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 10px auto; /* Centers the image */
-    max-width: 100%;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Micheal Aderinto builds connected growth systems using Google Ads, landing pages, GA4/GTM, CRM pipelines, and AI-powered follow-up." />
+    <meta name="theme-color" content="#0d1c17" />
+    <meta property="og:title" content="Micheal Aderinto · Growth Marketer & Systems Builder" />
+    <meta property="og:description" content="Google Ads, landing pages, tracking, CRM, and AI follow-up connected from click to revenue." />
+    <meta property="og:type" content="website" />
+    <title>Micheal Aderinto · Growth Marketer & Systems Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-.menu-toggle {
-    display: none; /* Hidden by default */
-    background: #ff6600;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 5px;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Navigation */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show menu button */
-        width: 100%;
-        text-align: center;
-        padding: 12px;
-    }
-
-   .nav-links {
-    display: none;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    background: #003366;
-    position: absolute;
-    left: 0;
-    top: 50px;
-    z-index: 10;
-}
-
-
-    .nav-links.show {
-        display: flex; /* Show when toggled */
-    }
-
-    .nav-links li {
-        padding: 10px 0;
-    }
-}
-
-        .container {
-            width: 90%;
-            max-width: 100vw;
-            margin: auto;
-            padding: 20px 0;
-        }
-        section {
-            background: white;
-            padding: 30px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #004a99;
-        }
-        ul {
-            list-style: none;
-        }
-        ul li {
-            background: #e3f2fd;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .metrics-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .metric {
-            background: #e3f2fd;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-            flex: 1 1 30%;
-            margin: 10px;
-        }
-        button {
-            background: #ff6600;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        button:hover {
-            background: #cc5200;
-        }
-        footer {
-            background: #003366;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        .contact-links a {
-            color: #ffcc00;
-            text-decoration: none;
-            font-weight: bold;
-        }
-       @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-    .metrics-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .metric {
-        width: 80%;
-    }
-} /* <- Closing bracket added */
-
-/* Case Study Section */
-.case-study {
-    padding: 60px 20px;
-    background: white;
-    text-align: center;
-}
-
-.case-study .container {
-    max-width: 1200px;  /* Set a reasonable max-width */
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px; /* Ensure padding so content doesn’t touch edges */
-}
-
-
-.case-study h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #1d3557;
-    margin-bottom: 20px;
-}
-
-/* Section Titles */
-.section-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #e63946;
-    margin-top: 30px;
-    text-align: left;
-}
-
-/* Paragraphs & Lists */
-p {
-    font-size: 1rem;
-    line-height: 1.7;
-    text-align: left;
-}
-
-.case-study ul {
-    text-align: left;
-    list-style: none;
-    padding-left: 0;
-}
-
-.case-study ul li {
-    display: block; /* Change from flex to block for proper spacing */
-    padding: 12px 0;
-    font-size: 1rem;
-}
-
-
-.case-study ul li::before {
-    margin-right: 10px;
-    color: #2a9d8f;
-    font-size: 1.2rem;
-}
-
-/* CTA Button */
-.cta {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.cta p {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.cta-button {
-    display: inline-block;
-    background: #1d3557;
-    color: white;
-    padding: 12px 25px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    max-width: 100%;
-}
-
-
-.cta-button:hover {
-    background: #457b9d;
-}
-
-/* Highlighted Text */
-.highlight {
-    color: #e63946;
-    font-weight: bold;
-}
-
-/* Animations */
-.fade-in {
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-        }
-
-    </style>
-</head>
-<body>
-    <header>
-        <h1>🚀 Scale Your Business with High-Converting Ads</h1>
-        <p>Maximize ROI with Data-Driven Digital Marketing Strategies</p>
+    <header class="site-header" data-header>
+      <div class="nav-shell">
+        <a class="logo" href="#top" aria-label="Micheal Aderinto home">
+          <span>MA</span><b>/</b>
+        </a>
+        <nav aria-label="Main navigation" data-nav>
+          <a href="#services">Services</a>
+          <a href="#work">Selected work</a>
+          <a href="#about">About</a>
+          <a href="#process">Process</a>
+        </nav>
+        <a class="nav-cta" href="mailto:adreintomicheal6@gmail.com?subject=Project%20enquiry">Start a project <span>↗</span></a>
+        <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" data-menu>
+          <span></span><span></span>
+        </button>
+      </div>
     </header>
-    
-    <nav>
-    <button class="menu-toggle">☰ Menu</button>
-    <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <img src="img/mike.jpg" alt="Michael Babatunde Aderinto" class="profile-img">
-            <p><b>I’m Michael Babatunde Aderinto, a Performance-Driven Digital Marketer | Paid Ads Specialist | Data & Conversion Optimization Expert With 3+ years of experience, I help businesses scale profitably.</b></p>
-        </section>
-    
-        <section id="skills">
-            <h2>Key Skills</h2>
-            <ul>
-                <li>✅ Google & Facebook Ads</li>
-                <li>✅ Sales Funnel Optimization</li>
-                <li>✅ Data Analytics & Performance Tracking</li>
-                <li>✅ Conversion Optimization</li>
-                <li>✅ Persuasive Copywriting</li>
-            </ul>
-        </section>
-    
-<section class="case-study">
-        <div class="container">
-            <h2 class="fade-in">🚀 Case Study: How I Scaled a Supplement Brand’s Sales by Over 10X</h2>
 
-            <div class="challenge">
-                <h3 class="section-title">⚡ The Challenge:</h3>
-                <p>A supplement brand with no online presence wanted to scale its sales but had no website, customer acquisition strategy, or digital marketing system. They needed a fast, effective solution to generate consistent sales and build a loyal customer base.</p>
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-grid shell">
+          <div class="hero-copy reveal">
+            <div class="availability"><i></i> Available for select remote projects</div>
+            <p class="kicker">Growth marketer · systems builder</p>
+            <h1>I build the system between <em>ad spend</em> and <em>revenue.</em></h1>
+            <p class="hero-text">Google Ads, conversion-focused landing pages, GA4/GTM tracking, CRM pipelines, and AI-assisted follow-up—connected into one measurable customer journey.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work">View selected work <span>↓</span></a>
+              <a class="button button-secondary" href="mailto:adreintomicheal6@gmail.com?subject=Growth%20system%20project">Discuss a project <span>↗</span></a>
             </div>
-
-            <div class="strategy">
-                <h3 class="section-title">🎯 The Strategy:</h3>
-                <p>I developed a high-converting website and ran laser-targeted ads, focusing only on ready-to-buy customers. This approach skyrocketed sales by over <b>300%</b> in a short time. The client was thrilled, but I noticed a major flaw—<span class="highlight">we were losing a massive number of potential buyers who weren’t ready to purchase immediately.</span></p>
-                <p>To plug this revenue leak, I implemented a <b>strategic bridge page</b> with an irresistible lead magnet—an exclusive <b>ebook</b> offered in exchange for their email addresses.</p>
+            <div class="hero-meta">
+              <span>Lagos, Nigeria</span><i></i><span>Working remotely worldwide</span><i></i><a href="https://github.com/MICHEALSHOE2000" target="_blank" rel="noreferrer">GitHub ↗</a>
             </div>
+          </div>
 
-            <div class="optimization">
-                <h3 class="section-title">🔥 The Game-Changing Optimization:</h3>
-                <ul>
-                    <li><b>Retargeting Mastery:</b> Instead of losing potential buyers, I redirected them back to the landing page with a powerful follow-up system.</li>
-                    <li><b>Lead Nurturing:</b> We built an automated email sequence to educate, engage, and convert these leads over time.</li>
-                    <li><b>Sales Acceleration:</b> This hybrid approach <span class="highlight">not only captured leads but also turned hesitant buyers into loyal customers</span>, driving sales from <b>3X to over 10X growth!</b></li>
-                </ul>
-            </div>
-
-            <div class="results">
-                <h3 class="section-title">🏆 The Results:</h3>
-                <ul>
-                    <li>✅ <b>Explosive Revenue Growth</b> – Sales skyrocketed over <b>1000%</b> from the initial baseline.</li>
-                    <li>✅ <b>Lead Magnet Success</b> – A high-performing email list was built, fueling long-term sales.</li>
-                    <li>✅ <b>Maximum ROI</b> – Every advertising dollar spent now generated exponentially higher returns.</li>
-                </ul>
-                <p class="conclusion">The client went from <b>struggling to make sales online</b> to <span class="highlight">dominating their niche</span> with a high-converting system. What started as a simple ad campaign transformed into a <b>fully optimized sales machine</b>, delivering <b>insane results and unmatched profitability.</b></p>
-            </div>
-
-            <div class="cta">
-                <p>🚀 Ready to scale your business with high-converting ads & data-driven strategies?</p>
-                <a href="#contact" class="cta-button">Let’s Work Together</a>
-            </div>
-        </div>
-    <img src ="img/camp.png"/>
-        </section>
-<section class="case-study">
-    <div class="container">
-        <h2 class="fade-in">🚀 Case Study: How I Transformed a Struggling Electronics E-commerce Store into a 7-Figure Business</h2>
-
-        <div class="challenge">
-            <h3 class="section-title">⚡ The Challenge:</h3>
-            <p>A mid-sized e-commerce store selling <b>electronics and gadgets</b> was struggling with low sales, poor conversion rates, and inefficient ad spend. Despite having a website, their traffic wasn’t converting, and their cost per acquisition was too high to be sustainable. The business owner needed a <b>profitable, scalable system</b> to drive consistent revenue growth.</p>
-        </div>
-
-        <div class="strategy">
-            <h3 class="section-title">🎯 The Strategy:</h3>
-            <p>Leveraging my expertise in <b>Google & Facebook Ads, Sales Funnel Optimization, and Data Analytics</b>, I implemented a comprehensive <b>data-driven growth strategy:</b></p>
-            <ul>
-                <li><b>Laser-Targeted Paid Ads:</b> Restructured their Google and Facebook ad campaigns, narrowing the audience to high-intent buyers while optimizing creatives and ad copy.</li>
-                <li><b>Conversion Optimization:</b> Analyzed website heatmaps and user behavior data to redesign the checkout process, reducing friction and cart abandonment.</li>
-                <li><b>Advanced Retargeting & Email Sequences:</b> Implemented segmented email sequences for abandoned carts, new leads, and past buyers, nurturing them through automated follow-ups.</li>
-                <li><b>Persuasive Copywriting & Landing Pages:</b> Developed a compelling, high-converting sales page that addressed objections and built trust.</li>
-            </ul>
-        </div>
-
-        <div class="optimization">
-            <h3 class="section-title">🔥 The Game-Changing Optimization:</h3>
-            <ul>
-                <li><b>AI-Powered Data Analytics:</b> Used tracking and A/B testing to identify underperforming ad creatives and allocate budget to top-performing assets.</li>
-                <li><b>Multi-Touch Retargeting:</b> Implemented a full-funnel retargeting strategy that nurtured cold traffic and converted warm leads.</li>
-                <li><b>Profit-Driven Scaling:</b> Focused on scaling winning ads with a sustainable ROI-first approach instead of blindly increasing the ad budget.</li>
-            </ul>
-        </div>
-
-        <div class="results">
-            <h3 class="section-title">🏆 The Results:</h3>
-            <ul>
-                <li>✅ <b>7-Figure Revenue Surge:</b> Achieved a <b>1200% increase in sales</b> within 6 months.</li>
-                <li>✅ <b>Ad Costs Slashed:</b> Reduced customer acquisition costs by <b>45%</b> through better targeting and ad optimization.</li>
-                <li>✅ <b>Conversion Rate Optimization:</b> Increased conversion rate from <b>1.8% to 5.6%</b>, maximizing every website visitor.</li>
-                <li>✅ <b>Loyal Customer Base Built:</b> Implemented retention strategies that <b>boosted repeat purchases by 75%</b>.</li>
-            </ul>
-        </div>
-
-        <div class="cta">
-            <p>🚀 Ready to scale your business with high-converting ads & data-driven growth strategies?</p>
-            <a href="#contact" class="cta-button">Let’s Work Together</a>
-        </div>
-    </div>
-   
-</section>
-<section class="case-study">
-    <div class="container">
-        <h2 class="fade-in">📱 Case Study: How I Skyrocketed a Phone Business with Influencer Marketing & a Game-Changing Loyalty Program</h2>
-
-        <div class="challenge">
-            <h3 class="section-title">🔥 The Challenge:</h3>
-            <p>A struggling phone business needed a breakthrough. Sales were inconsistent, customer engagement was low, and despite having quality products, they weren’t getting the traction they deserved. The goal? Explode sales, build a loyal customer base, and dominate the market.</p>
-        </div>
-
-        <div class="strategy">
-            <h3 class="section-title">🎯 The Strategy:</h3>
-            <p>I crafted a high-impact digital marketing strategy centered around influencer partnerships and an irresistible loyalty program.</p>
-            <ul>
-                <li><b>✅ Influencer Marketing Power Play:</b> We partnered with a highly influential tech figure, leveraging their audience to build brand awareness, generate leads, and drive instant credibility.</li>
-                <li><b>✅ Lead Generation on Overdrive:</b> Strategic content and ad placements combined with the influencer’s engagement led to an influx of high-intent buyers, skyrocketing sales.</li>
-            </ul>
-        </div>
-
-        <div class="loyalty-program">
-            <h3 class="section-title">🚀 The Game-Changer: The Ultimate Loyalty Program</h3>
-            <p>Beyond sales, we engineered a powerful retention & referral system that transformed one-time buyers into lifelong customers:</p>
-            <ul>
-                <li><b>🔹 Monthly Live Raffle Draws:</b> Every customer—regardless of purchase size—was entered into a monthly gadget giveaway, creating an insane buzz and repeat purchases.</li>
-                <li><b>🔹 Referral Frenzy:</b> Customers who referred friends got additional entries into the raffle, sparking a viral effect that turned happy buyers into brand ambassadors.</li>
-            </ul>
-        </div>
-
-        <div class="results">
-            <h3 class="section-title">📈 The Results:</h3>
-            <ul>
-                <li>💥 <b>Massive Sales Growth</b> – The campaign drove an unprecedented spike in sales, positioning the brand as a mobile retail leader.</li>
-                <li>💥 <b>Referral Avalanche</b> – The giveaways triggered a flood of referrals, bringing in new customers at no additional ad cost.</li>
-                <li>💥 <b>Unstoppable Customer Loyalty</b> – The interactive events built an engaged, loyal community eager to keep shopping and participating.</li>
-            </ul>
-        </div>
-
-        <div class="impact">
-            <h3 class="section-title">🏆 Final Impact:</h3>
-            <p>The business didn’t just grow—it became an unstoppable force in the phone industry. What started as an experimental strategy turned into a revenue-generating machine, proving that with the right approach, any business can scale exponentially and build a devoted customer base.</p>
-        </div>
-
-        <div class="cta">
-            <p>🚀 Ready to take your business to the next level?</p>
-            <a href="#contact" class="cta-button">Let’s Make It Happen!</a>
-        </div>
-    </div>
-</section>
-        <section id="testimonials">
-        <h2>📢 Testimonials</h2>
-        <p>⭐️⭐️⭐️⭐️⭐️'Michael joined our company as an intern during his Industrial Chemistry program. 
-            Those six months were some of the best for our business—he not only gave us a strong online presence but also helped triple our sales. His impact was truly remarkable!"
-<p><b>— CEO, Elegance Allied Chemical Paint,berger Lagos</b></p>
-        <p>⭐️⭐️⭐️⭐️⭐️ “Our conversion rates jumped 30% after implementing his funnel strategies!"
-           <p><b> — CEO, dr dee clinic Ikeja Lagos </b></p>
-    </section>
-    
-        <section id="metrics">
-            <h2>Success Metrics</h2>
-            <div class="metrics-container">
-                <div class="metric">
-                    <h3>Website Traffic</h3>
-                    <p>Drive high-quality visitors to your site.</p>
+          <div class="hero-visual reveal" data-delay="1">
+            <div class="system-window">
+              <div class="window-bar"><span></span><span></span><span></span><b>growth-system.live</b></div>
+              <div class="window-body">
+                <div class="system-heading"><div><small>LIVE WORKFLOW</small><strong>Lead journey</strong></div><span><i></i> Active</span></div>
+                <div class="flow-line">
+                  <article><span>01</span><div><small>ACQUIRE</small><strong>Google Ads</strong></div><b>High intent</b></article>
+                  <article><span>02</span><div><small>CONVERT</small><strong>Landing page</strong></div><b>Lead captured</b></article>
+                  <article><span>03</span><div><small>MEASURE</small><strong>GA4 + GTM</strong></div><b>Source saved</b></article>
+                  <article><span>04</span><div><small>OPERATE</small><strong>CRM + AI</strong></div><b>Hot · 92/100</b></article>
+                  <article><span>05</span><div><small>MONETIZE</small><strong>Booked call</strong></div><b>Revenue linked</b></article>
                 </div>
-                <div class="metric">
-                    <h3>Lead Generation</h3>
-                    <p>Convert prospects into customers.</p>
-                </div>
-                <div class="metric">
-                    <h3>Brand Engagement</h3>
-                    <p>Build authority & trust online.</p>
-                </div>
+                <div class="system-result"><div><small>THE DIFFERENCE</small><strong>Marketing and sales finally share one source of truth.</strong></div><span>Click → customer</span></div>
+              </div>
             </div>
-        </section>
-    </div>
-    
+            <div class="profile-chip">
+              <img src="img/mike.jpg" alt="Micheal Aderinto" width="600" height="600" />
+              <div><strong>Micheal Aderinto</strong><span>Strategy + implementation</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="capability-strip">
+          <div class="shell">
+            <span>Paid acquisition</span><i></i><span>Conversion design</span><i></i><span>Measurement</span><i></i><span>Lead operations</span><i></i><span>Automation</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="positioning-section section" id="services">
+        <div class="shell">
+          <div class="section-head reveal">
+            <div><p class="kicker">What I do</p><h2>Most marketers stop at the lead. I connect what happens next.</h2></div>
+            <p>I help service businesses and growing brands turn disconnected marketing tools into a clear operating system—from the first search to the final sales outcome.</p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card reveal"><span>01</span><div class="service-icon">AD</div><h3>Paid acquisition</h3><p>Search campaigns built around intent, location, offer clarity, negative keywords, and conversion quality—not vanity traffic.</p><ul><li>Google Ads</li><li>Campaign architecture</li><li>Search-term optimization</li></ul></article>
+            <article class="service-card reveal" data-delay="1"><span>02</span><div class="service-icon">LP</div><h3>Landing pages & funnels</h3><p>Fast, mobile-first pages that match the ad, answer objections, establish trust, and make the next step obvious.</p><ul><li>Conversion copy</li><li>CRO</li><li>Lead capture</li></ul></article>
+            <article class="service-card reveal" data-delay="2"><span>03</span><div class="service-icon">G4</div><h3>Tracking & attribution</h3><p>A measurement plan that keeps campaign context attached to forms, calls, bookings, pipeline stages, and closed revenue.</p><ul><li>GA4</li><li>Google Tag Manager</li><li>Event design</li></ul></article>
+            <article class="service-card reveal" data-delay="3"><span>04</span><div class="service-icon">AI</div><h3>CRM & AI workflows</h3><p>Organized lead records, qualification, ownership, response alerts, approved follow-up, booking, and weekly reporting.</p><ul><li>Airtable</li><li>Make / n8n</li><li>AI qualification</li></ul></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="work-section section" id="work">
+        <div class="shell">
+          <div class="section-head reveal">
+            <div><p class="kicker">Selected work</p><h2>Systems designed to solve real business problems.</h2></div>
+            <p>Working demos, implementation repositories, and client builds across local services, real estate, and commerce.</p>
+          </div>
+
+          <article class="featured-project reveal">
+            <div class="featured-copy">
+              <div class="project-label"><span>Featured case study</span><b>2026</b></div>
+              <h3>Ad-to-Revenue Growth System</h3>
+              <p>A complete, interactive demonstration of how a Google Ad becomes a tracked lead, qualified CRM record, follow-up sequence, booked appointment, and attributed closed sale.</p>
+              <div class="project-stack"><span>Google Ads</span><span>GA4/GTM</span><span>CRM</span><span>AI routing</span><span>Revenue attribution</span></div>
+              <div class="project-actions"><a href="https://aads-to-revenue.netlify.app/" target="_blank" rel="noreferrer">View live case study ↗</a><a href="https://github.com/MICHEALSHOE2000/missed-lead-recovery-case-study" target="_blank" rel="noreferrer">Explore repository ↗</a></div>
+              <small>Transparent portfolio demo using a fictional company and synthetic data.</small>
+            </div>
+            <div class="featured-visual" aria-hidden="true">
+              <div class="mini-browser">
+                <div class="mini-bar"><i></i><i></i><i></i><span>ad → revenue</span></div>
+                <div class="mini-content">
+                  <p>ATTRIBUTED LEAD JOURNEY</p>
+                  <h4>Every click. Every follow-up.<br />Every sales outcome.</h4>
+                  <div class="mini-nodes"><span>Ad</span><b>→</b><span>Page</span><b>→</b><span>CRM</span><b>→</b><span>Booked</span></div>
+                  <div class="mini-score"><div><small>Qualification</small><strong>Hot · 92/100</strong></div><em>Priority</em></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <div class="project-art art-gutter"><span>KR</span><div><i></i><i></i><i></i></div><strong>Local-service growth plan</strong></div>
+              <div class="project-body"><div class="project-label"><span>Home services</span><b>Strategy + build</b></div><h3>KR Gutters Growth System</h3><p>A conversion-led website and acquisition framework covering local search, paid ads, SEO, lead capture, and follow-up.</p><div class="project-stack"><span>Landing page</span><span>PPC plan</span><span>Local SEO</span></div><a href="https://github.com/MICHEALSHOE2000/kr-gutters-growth-system" target="_blank" rel="noreferrer">View repository ↗</a></div>
+            </article>
+
+            <article class="project-card reveal" data-delay="1">
+              <div class="project-art art-realestate"><span>LH</span><div class="property-lines"><i></i><i></i><i></i></div><strong>Property lead operations</strong></div>
+              <div class="project-body"><div class="project-label"><span>Real estate</span><b>CRM workflow</b></div><h3>Lightway Homes Lead System</h3><p>A property journey that captures budget and timeline, scores lead fit, assigns staff, and routes enquiries into an accountable pipeline.</p><div class="project-stack"><span>CRM</span><span>AI scoring</span><span>Automation</span></div><a href="https://github.com/MICHEALSHOE2000/lightway" target="_blank" rel="noreferrer">View repository ↗</a></div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-art art-commerce"><span>CC</span><div class="device-stack"><i></i><i></i><i></i></div><strong>Premium commerce experience</strong></div>
+              <div class="project-body"><div class="project-label"><span>Commerce</span><b>Web experience</b></div><h3>Chex Computers Storefront</h3><p>A premium laptop retail and wholesale experience designed for product discovery, trust, mobile browsing, and direct enquiries.</p><div class="project-stack"><span>Product UX</span><span>Responsive UI</span><span>SEO structure</span></div><a href="https://github.com/MICHEALSHOE2000/chexcomputer" target="_blank" rel="noreferrer">View repository ↗</a></div>
+            </article>
+
+            <article class="project-card reveal" data-delay="1">
+              <div class="project-art art-gadget"><span>ME</span><div class="phone-stack"><i></i><i></i><i></i></div><strong>Mobile-first gadget catalog</strong></div>
+              <div class="project-body"><div class="project-label"><span>Gadget retail</span><b>Website</b></div><h3>Megabros Enterprises</h3><p>A mobile-first gadget storefront presenting device inventory, brand trust, contact paths, and a cleaner buying experience.</p><div class="project-stack"><span>Catalog UI</span><span>Mobile UX</span><span>Lead capture</span></div><a href="https://github.com/MICHEALSHOE2000/megabros" target="_blank" rel="noreferrer">View repository ↗</a></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof-section section">
+        <div class="shell proof-grid">
+          <div class="proof-copy reveal">
+            <p class="kicker">Hands-on execution</p>
+            <h2>Strategy supported by real platform work.</h2>
+            <p>I work across campaign structure, search terms, landing-page experience, tracking, CRM handoff, and reporting. The goal is not simply cheaper clicks—it is a cleaner path to qualified conversations and revenue.</p>
+            <div class="proof-points"><span><b>01</b> Campaign diagnostics</span><span><b>02</b> Search-term decisions</span><span><b>03</b> Conversion tracking</span><span><b>04</b> Sales follow-through</span></div>
+          </div>
+          <figure class="ads-proof reveal" data-delay="1">
+            <div class="proof-toolbar"><span>Historical Google Ads snapshot</span><b>Dec 2024</b></div>
+            <img src="img/camp.png" alt="Historical Google Ads campaign dashboard showing impressions, clicks, average CPC, and cost" width="1002" height="401" loading="lazy" />
+            <figcaption>Interface evidence from a historical campaign snapshot. Performance varies by offer, market, targeting, and measurement quality.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="about-section section" id="about">
+        <div class="shell about-grid">
+          <div class="about-photo reveal">
+            <div class="photo-frame"><img src="img/mike.jpg" alt="Portrait of Micheal Aderinto" width="600" height="600" loading="lazy" /></div>
+            <div class="photo-caption"><span>Based in Lagos</span><b>Open to remote collaboration</b></div>
+          </div>
+          <div class="about-copy reveal" data-delay="1">
+            <p class="kicker">About me</p>
+            <h2>I combine marketing judgment with implementation.</h2>
+            <p>I’m Micheal Aderinto, a growth marketer and systems builder focused on the space between customer acquisition and sales execution.</p>
+            <p>My work spans paid search, conversion pages, analytics, CRM design, and automation. That lets me diagnose the whole lead journey instead of optimizing one isolated tool while the rest of the process leaks opportunities.</p>
+            <p>I’ve worked across local services, real estate, healthcare, and gadget retail—building practical systems that teams can understand, operate, and improve.</p>
+            <div class="principles"><div><span>01</span><strong>Business outcome first</strong><p>Tools follow the process and commercial goal.</p></div><div><span>02</span><strong>Track what matters</strong><p>Bookings and revenue—not inflated activity metrics.</p></div><div><span>03</span><strong>Build for handoff</strong><p>Clients keep ownership, visibility, and documentation.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="process-section section" id="process">
+        <div class="shell">
+          <div class="section-head reveal"><div><p class="kicker">How I work</p><h2>A focused path from diagnosis to a working system.</h2></div><p>Every engagement starts by finding the largest leak—not by forcing a predetermined tool stack.</p></div>
+          <div class="process-grid">
+            <article class="reveal"><span>01</span><h3>Audit</h3><p>Map acquisition, landing pages, tracking, lead handling, follow-up, booking, and revenue reporting.</p></article>
+            <article class="reveal" data-delay="1"><span>02</span><h3>Design</h3><p>Define the offer, events, CRM fields, ownership, qualification, automation, and success criteria.</p></article>
+            <article class="reveal" data-delay="2"><span>03</span><h3>Build & test</h3><p>Implement the system and run controlled test leads through success, failure, booking, and closed outcomes.</p></article>
+            <article class="reveal" data-delay="3"><span>04</span><h3>Launch & improve</h3><p>Monitor lead quality and sales outcomes, then prioritize the next highest-impact improvement.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="stack-section section">
+        <div class="shell stack-grid">
+          <div class="reveal"><p class="kicker">Working toolkit</p><h2>Tools I use to connect the journey.</h2></div>
+          <div class="tool-groups reveal" data-delay="1">
+            <article><span>Acquisition</span><div><b>Google Ads</b><b>Meta Ads</b><b>Keyword research</b><b>Offer strategy</b></div></article>
+            <article><span>Conversion</span><div><b>HTML/CSS/JS</b><b>React</b><b>Next.js</b><b>Tailwind</b><b>CRO</b></div></article>
+            <article><span>Measurement</span><div><b>GA4</b><b>Google Tag Manager</b><b>Clarity</b><b>Event design</b></div></article>
+            <article><span>Operations</span><div><b>Airtable</b><b>Google Sheets</b><b>Make</b><b>n8n</b><b>Zapier</b></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="shell contact-card reveal">
+          <div><p class="kicker">Have a lead-generation problem?</p><h2>Let’s find the leak before you buy more traffic.</h2><p>Send a short description of your business, current lead source, and biggest challenge. I’ll reply with the first area I would investigate.</p></div>
+          <div class="contact-actions"><a class="button button-light" href="mailto:adreintomicheal6@gmail.com?subject=Portfolio%20project%20enquiry">Email Micheal <span>↗</span></a><a href="https://github.com/MICHEALSHOE2000" target="_blank" rel="noreferrer">Browse GitHub ↗</a><small>adreintomicheal6@gmail.com</small></div>
+        </div>
+      </section>
+    </main>
+
     <footer>
-        <h2>Let's Connect</h2>
-        <p>Email: <a class="contact-links" href="mailto:adreintomicheal6@gmail.com">adreintomicheal6@gmail.com</a></p>
-        <p>Phone: <a class="contact-links" href="tel:+2347086865133">+234 708 686 5133</a></p>
-        <p>Follow me on <a class="contact-links" href="#">LinkedIn</a> | <a class="contact-links" href="#">Instagram</a> | <a class="contact-links" href="#">YouTube</a></p>
+      <div class="shell footer-grid"><div><a class="logo footer-logo" href="#top"><span>MA</span><b>/</b></a><p>Growth marketing and lead systems, built end to end.</p></div><div><span>Navigate</span><a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a></div><div><span>Connect</span><a href="mailto:adreintomicheal6@gmail.com">Email</a><a href="https://github.com/MICHEALSHOE2000" target="_blank" rel="noreferrer">GitHub</a></div><div class="footer-end"><span>© <b data-year></b> Micheal Aderinto</span><a href="#top">Back to top ↑</a></div></div>
     </footer>
-</body>
+  </body>
 </html>
