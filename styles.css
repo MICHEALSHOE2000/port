@@ -221,13 +221,29 @@ h2 { margin-bottom: 0; font-family: Georgia, "Times New Roman", serif; font-size
 .tool-groups b { padding: 7px 9px; border-radius: 6px; color: #53655e; background: #eef2ef; font-size: 8px; }
 
 .contact-section { padding: 76px 0; background: var(--ink); }
-.contact-card { display: grid; grid-template-columns: 1.2fr .8fr; gap: 60px; align-items: center; padding: 52px; border: 1px solid rgba(255,255,255,.12); border-radius: 18px; color: white; background: linear-gradient(135deg, #123e31, #0e261e); }
+.contact-card { display: grid; grid-template-columns: .82fr 1.18fr; gap: 52px; align-items: start; padding: 52px; border: 1px solid rgba(255,255,255,.12); border-radius: 18px; color: white; background: linear-gradient(135deg, #123e31, #0e261e); }
 .contact-card .kicker { color: #7ce5b9; }
 .contact-card h2 { margin-bottom: 18px; }
 .contact-card p { max-width: 650px; margin-bottom: 0; color: #aac0b7; font-size: 12px; line-height: 1.75; }
-.contact-actions { display: grid; justify-items: start; gap: 13px; }
-.contact-actions > a:not(.button) { color: #b8d0c6; font-size: 10px; font-weight: 850; }
-.contact-actions small { color: #718c82; font-size: 8px; }
+.direct-contact { display: grid; gap: 9px; margin-top: 30px; }
+.direct-contact a { display: grid; gap: 4px; padding: 13px 15px; border: 1px solid rgba(255,255,255,.11); border-radius: 9px; background: rgba(255,255,255,.035); transition: border-color .2s ease, background .2s ease; }
+.direct-contact a:hover { border-color: rgba(124,229,185,.38); background: rgba(255,255,255,.07); }
+.direct-contact small { color: #78958a; font-size: 7px; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
+.direct-contact strong { color: #d6e4de; font-size: 9px; overflow-wrap: anywhere; }
+.project-form { position: relative; display: grid; gap: 17px; padding: 28px; border-radius: 14px; color: var(--ink); background: #f7faf8; box-shadow: 0 24px 60px rgba(0,0,0,.2); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+.project-form label { display: grid; gap: 7px; color: #40584f; font-size: 8px; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; }
+.project-form input, .project-form select, .project-form textarea { width: 100%; border: 1px solid #cfdad4; border-radius: 8px; outline: 0; color: var(--ink); background: white; font: inherit; font-size: 11px; letter-spacing: normal; text-transform: none; transition: border-color .2s ease, box-shadow .2s ease; }
+.project-form input, .project-form select { min-height: 44px; padding: 0 12px; }
+.project-form textarea { min-height: 125px; padding: 12px; resize: vertical; line-height: 1.55; }
+.project-form input::placeholder, .project-form textarea::placeholder { color: #95a39d; }
+.project-form input:focus, .project-form select:focus, .project-form textarea:focus { border-color: var(--forest); box-shadow: 0 0 0 3px rgba(34,105,82,.12); }
+.form-submit { justify-self: start; border: 0; cursor: pointer; }
+.form-submit:disabled { cursor: wait; opacity: .62; }
+.form-status { min-height: 18px; color: #60756d !important; font-size: 9px !important; font-weight: 800; line-height: 1.5 !important; }
+.form-status.is-success { color: #176a48 !important; }
+.form-status.is-error { color: #a23b32 !important; }
+.honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
 
 footer { padding: 65px 0 28px; color: #a8bab2; background: #07100d; }
 .footer-grid { display: grid; grid-template-columns: 1.7fr .7fr .7fr 1fr; gap: 45px; }
@@ -294,7 +310,8 @@ footer { padding: 65px 0 28px; color: #a8bab2; background: #07100d; }
   .process-grid span { margin-bottom: 48px; }
   .tool-groups article { grid-template-columns: 1fr; gap: 10px; }
   .contact-card { grid-template-columns: 1fr; gap: 32px; padding: 30px; }
-  .contact-actions .button { width: 100%; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-submit { width: 100%; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid > div:first-child, .footer-end { grid-column: 1 / -1; }
 }
@@ -312,6 +329,7 @@ footer { padding: 65px 0 28px; color: #a8bab2; background: #07100d; }
   .mini-nodes b { display: none; }
   .project-art > div { right: 8px; }
   .photo-caption { align-items: flex-start; flex-direction: column; }
+  .project-form { padding: 20px; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-grid > div { grid-column: auto !important; }
 }
