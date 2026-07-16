@@ -42,3 +42,33 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
 document.querySelectorAll("[data-year]").forEach((item) => {
   item.textContent = new Date().getFullYear();
 });
+
+const projectForm = document.querySelector("[data-project-form]");
+const formStatus = document.querySelector("[data-form-status]");
+const submitButton = document.querySelector("[data-submit]");
+
+projectForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  submitButton?.setAttribute("disabled", "");
+  formStatus?.classList.remove("is-success", "is-error");
+  if (formStatus) formStatus.textContent = "Sending your project details…";
+
+  try {
+    const response = await fetch(projectForm.action, {
+      method: "POST",
+      body: new FormData(projectForm),
+      headers: { Accept: "application/json" },
+    });
+
+    if (!response.ok) throw new Error("Form submission failed");
+
+    projectForm.reset();
+    formStatus?.classList.add("is-success");
+    if (formStatus) formStatus.textContent = "Thanks—your project details were sent. I’ll reply by email.";
+  } catch (error) {
+    formStatus?.classList.add("is-error");
+    if (formStatus) formStatus.textContent = "The form could not be sent. Please email me at michealderinto6@gmail.com.";
+  } finally {
+    submitButton?.removeAttribute("disabled");
+  }
+});
