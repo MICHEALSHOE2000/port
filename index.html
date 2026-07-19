@@ -27,6 +27,7 @@
         <nav aria-label="Main navigation" data-nav>
           <a href="#services">Services</a>
           <a href="#work">Selected work</a>
+          <a href="#lab">Live proof</a>
           <a href="#about">About</a>
           <a href="#process">Process</a>
         </nav>
@@ -63,7 +64,7 @@
                   <article><span>01</span><div><small>ACQUIRE</small><strong>Google Ads</strong></div><b>High intent</b></article>
                   <article><span>02</span><div><small>CONVERT</small><strong>Landing page</strong></div><b>Lead captured</b></article>
                   <article><span>03</span><div><small>MEASURE</small><strong>GA4 + GTM</strong></div><b>Source saved</b></article>
-                  <article><span>04</span><div><small>OPERATE</small><strong>CRM + AI</strong></div><b>Hot · 92/100</b></article>
+                  <article><span>04</span><div><small>OPERATE</small><strong>Lead intelligence</strong></div><b>Rationale ready</b></article>
                   <article><span>05</span><div><small>MONETIZE</small><strong>Booked call</strong></div><b>Revenue linked</b></article>
                 </div>
                 <div class="system-result"><div><small>THE DIFFERENCE</small><strong>Marketing and sales finally share one source of truth.</strong></div><span>Click → customer</span></div>
@@ -92,8 +93,8 @@
           <div class="service-grid">
             <article class="service-card reveal"><span>01</span><div class="service-icon">AD</div><h3>Ads & local visibility</h3><p>Performance-focused campaigns and Google Business Profile improvements built to generate qualified enquiries—not vanity traffic.</p><ul><li>Google Ads</li><li>Google Business Profile</li><li>Search-term optimization</li></ul></article>
             <article class="service-card reveal" data-delay="1"><span>02</span><div class="service-icon">LP</div><h3>Landing pages & funnels</h3><p>Fast, mobile-first pages that match the ad, answer objections, establish trust, and make the next step obvious.</p><ul><li>Conversion copy</li><li>CRO</li><li>Lead capture</li></ul></article>
-            <article class="service-card reveal" data-delay="2"><span>03</span><div class="service-icon">G4</div><h3>Tracking & attribution</h3><p>Analytics that reveal how traffic behaves, where prospects drop off, and which campaigns lead to forms, calls, bookings, and revenue.</p><ul><li>GA4</li><li>Google Tag Manager</li><li>Data-informed decisions</li></ul></article>
-            <article class="service-card reveal" data-delay="3"><span>04</span><div class="service-icon">AI</div><h3>CRM & AI workflows</h3><p>Organized lead records, qualification, ownership, response alerts, approved follow-up, booking, and weekly reporting.</p><ul><li>Airtable</li><li>Make / n8n</li><li>AI qualification</li></ul></article>
+            <article class="service-card reveal" data-delay="2"><span>03</span><div class="service-icon">G4</div><h3>Tracking & attribution</h3><p>Analytics that connect campaigns to forms, calls, bookings, and revenue—then turn the data into a weekly summary clients can act on.</p><ul><li>GA4 + GTM</li><li>Revenue attribution</li><li>Client-ready reports</li></ul></article>
+            <article class="service-card reveal" data-delay="3"><span>04</span><div class="service-icon">AI</div><h3>CRM & lead intelligence</h3><p>A reasoning layer that reads form, behaviour, budget, and timeline signals; explains lead intent; drafts an approved reply; and routes edge cases to a human.</p><ul><li>Explainable scoring</li><li>Brand-voice drafts</li><li>Human review</li></ul></article>
           </div>
         </div>
       </section>
@@ -109,9 +110,9 @@
             <div class="featured-copy">
               <div class="project-label"><span>Featured case study</span><b>2026</b></div>
               <h3>Ad-to-Revenue Growth System</h3>
-              <p>A complete, interactive demonstration of how a Google Ad becomes a tracked lead, qualified CRM record, follow-up sequence, booked appointment, and attributed closed sale.</p>
-              <div class="project-stack"><span>Google Ads</span><span>GA4/GTM</span><span>CRM</span><span>AI routing</span><span>Revenue attribution</span></div>
-              <div class="project-actions"><a href="https://aads-to-revenue.netlify.app/" target="_blank" rel="noreferrer">View live case study ↗</a><a href="https://github.com/MICHEALSHOE2000/missed-lead-recovery-case-study" target="_blank" rel="noreferrer">Explore repository ↗</a></div>
+              <p>A complete demonstration of how a Google Ad becomes a tracked lead, explainable CRM decision, personalized follow-up, booked appointment, and attributed closed sale.</p>
+              <div class="project-stack"><span>Google Ads</span><span>GA4/GTM</span><span>CRM</span><span>Reasoned routing</span><span>Revenue attribution</span></div>
+              <div class="project-actions"><a href="#lab">Try the live proof lab ↓</a><a href="https://aads-to-revenue.netlify.app/" target="_blank" rel="noreferrer">View full case study ↗</a><a href="https://github.com/MICHEALSHOE2000/missed-lead-recovery-case-study" target="_blank" rel="noreferrer">Explore repository ↗</a></div>
               <small>Transparent portfolio demo using a fictional company and synthetic data.</small>
             </div>
             <div class="featured-visual" aria-hidden="true">
@@ -127,15 +128,128 @@
             </div>
           </article>
 
+          <section class="proof-lab reveal" id="lab" aria-labelledby="lab-title" data-lead-lab>
+            <div class="lab-intro">
+              <div>
+                <p class="kicker">Interactive system proof</p>
+                <h3 id="lab-title">Put a lead through the intelligence layer.</h3>
+              </div>
+              <p>Choose a synthetic lead, change the signals, then drag the lead through the journey. The demo shows the decision contract behind a production AI workflow: the evidence used, written rationale, brand-voice draft, safety flags, and client-facing attribution.</p>
+            </div>
+
+            <div class="lab-controls" aria-label="Demo settings">
+              <label>Lead scenario
+                <select data-scenario>
+                  <option value="gutter">Urgent gutter enquiry</option>
+                  <option value="property">Property buyer researching</option>
+                  <option value="edge">High intent · budget conflict</option>
+                </select>
+              </label>
+              <label>Client voice
+                <select data-voice>
+                  <option value="direct">Helpful &amp; direct</option>
+                  <option value="warm">Warm &amp; reassuring</option>
+                  <option value="premium">Concise &amp; premium</option>
+                </select>
+              </label>
+              <span class="synthetic-badge">Synthetic data · live browser demo</span>
+            </div>
+
+            <div class="journey-canvas">
+              <div class="lead-card" draggable="true" tabindex="0" role="button" data-lead-card aria-describedby="drag-help">
+                <span data-lead-initials>JM</span>
+                <div><small>ACTIVE LEAD</small><strong data-lead-name>Jordan Miles</strong><b data-lead-service>Gutter repair · Marietta, GA</b></div>
+                <em data-stage-label>Acquire</em>
+              </div>
+
+              <div class="stage-track" data-stage-track role="group" aria-label="Lead journey stages">
+                <button type="button" class="is-active" data-stage="0" aria-pressed="true"><small>01</small><strong>Acquire</strong><span>High-intent click</span></button>
+                <button type="button" data-stage="1" aria-pressed="false"><small>02</small><strong>Convert</strong><span>Form answers</span></button>
+                <button type="button" data-stage="2" aria-pressed="false"><small>03</small><strong>Measure</strong><span>Behaviour joined</span></button>
+                <button type="button" data-stage="3" aria-pressed="false"><small>04</small><strong>Operate</strong><span>Score + route</span></button>
+                <button type="button" data-stage="4" aria-pressed="false"><small>05</small><strong>Monetize</strong><span>Outcome linked</span></button>
+              </div>
+              <div class="journey-progress" aria-hidden="true"><i data-progress></i></div>
+              <p class="lab-help" id="drag-help">Drag the lead onto a stage, select a stage, or focus the lead and use the arrow keys.</p>
+            </div>
+
+            <div class="lab-workspace">
+              <form class="signal-card" data-signal-form>
+                <div class="panel-heading"><div><small>INPUT SIGNALS</small><h4>What the system reads</h4></div><span data-signal-count>5 signals</span></div>
+                <label>Timeline
+                  <select name="timeline" data-timeline>
+                    <option value="urgent">Within 7 days</option>
+                    <option value="soon">Within 30 days</option>
+                    <option value="months">1–3 months</option>
+                    <option value="exploring">Just researching</option>
+                  </select>
+                </label>
+                <label>Budget signal
+                  <select name="budget" data-budget>
+                    <option value="aligned">Budget matches service</option>
+                    <option value="flexible">Flexible / finance needed</option>
+                    <option value="unknown">Not supplied</option>
+                    <option value="below">Below likely minimum</option>
+                  </select>
+                </label>
+                <label>Website behaviour
+                  <select name="behavior" data-behavior>
+                    <option value="high">Pricing + reviews · repeat visit</option>
+                    <option value="medium">Service page · 2 pages</option>
+                    <option value="low">Single page · under 30 seconds</option>
+                  </select>
+                </label>
+                <label>Form answer
+                  <textarea name="message" rows="4" data-message></textarea>
+                </label>
+                <button class="lab-button" type="submit">Re-evaluate lead <span>→</span></button>
+              </form>
+
+              <div class="reasoning-card" aria-live="polite">
+                <div class="score-row">
+                  <div class="score-ring" data-score-ring><strong data-score>17</strong><span>/100</span></div>
+                  <div><small>LEAD INTENT</small><h4 data-verdict>New signal</h4><p data-route>Collect form answers before routing.</p></div>
+                  <span class="priority-pill" data-priority>New</span>
+                </div>
+                <div class="reason-block">
+                  <div class="panel-heading"><div><small>WRITTEN RATIONALE</small><h4>Why this decision was made</h4></div></div>
+                  <ul data-rationale></ul>
+                </div>
+                <div class="review-flag" data-review-flag hidden><strong>Human review required</strong><p data-review-reason></p></div>
+                <div class="followup-block">
+                  <div class="panel-heading"><div><small>CLIENT-VOICE FOLLOW-UP</small><h4>Personalized, editable draft</h4></div><button type="button" data-copy-followup>Copy draft</button></div>
+                  <textarea rows="6" data-followup aria-label="Generated follow-up draft" readonly></textarea>
+                  <p data-copy-status aria-live="polite"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="report-card">
+              <div class="report-heading">
+                <div><small>WEEKLY ATTRIBUTION BRIEF</small><h4>Raw events translated for the client</h4><p data-report-period>Demo account · Last 7 days</p></div>
+                <button type="button" data-copy-report>Copy client summary</button>
+              </div>
+              <div class="metric-grid">
+                <div><small>Ad spend</small><strong data-metric-spend>$1,240</strong><span data-metric-spend-note>Google Search</span></div>
+                <div><small>Qualified leads</small><strong data-metric-qualified>26</strong><span data-metric-quality-note>63% of enquiries</span></div>
+                <div><small>Booked calls</small><strong data-metric-booked>11</strong><span data-metric-booked-note>$112.73 each</span></div>
+                <div><small>Attributed outcome</small><strong data-metric-outcome>$18,200</strong><span data-metric-outcome-note>Closed revenue</span></div>
+              </div>
+              <div class="client-summary"><span>PLAIN-ENGLISH SUMMARY</span><p data-report-summary></p><small data-report-status aria-live="polite"></small></div>
+            </div>
+
+            <p class="lab-disclaimer">This portfolio prototype uses deterministic, inspectable scoring and synthetic data so it works without collecting visitor information. In a production build, approved model output is grounded in CRM and analytics fields, constrained by business rules, logged, and held for human approval where required.</p>
+          </section>
+
           <div class="project-grid">
             <article class="project-card reveal">
               <div class="project-art art-gutter"><span>KR</span><div><i></i><i></i><i></i></div><strong>Local-service growth plan</strong></div>
-              <div class="project-body"><div class="project-label"><span>Home services</span><b>Strategy + build</b></div><h3>KR Gutters Growth System</h3><p>A conversion-led website and acquisition framework covering local search, paid ads, SEO, lead capture, and follow-up.</p><div class="project-stack"><span>Landing page</span><span>PPC plan</span><span>Local SEO</span></div><a href="https://github.com/MICHEALSHOE2000/kr-gutters-growth-system" target="_blank" rel="noreferrer">View repository ↗</a></div>
+              <div class="project-body"><div class="project-label"><span>Home services</span><b>Strategy + build</b></div><h3>KR Gutters Growth System</h3><p>A conversion-led acquisition framework with lead capture, intent scoring, reviewable follow-up, and a weekly report linking ads to booked work.</p><div class="project-stack"><span>Landing page</span><span>Lead reasoning</span><span>Attribution</span></div><a href="https://github.com/MICHEALSHOE2000/kr-gutters-growth-system" target="_blank" rel="noreferrer">View repository ↗</a></div>
             </article>
 
             <article class="project-card reveal" data-delay="1">
               <div class="project-art art-realestate"><span>LH</span><div class="property-lines"><i></i><i></i><i></i></div><strong>Property lead operations</strong></div>
-              <div class="project-body"><div class="project-label"><span>Real estate</span><b>CRM workflow</b></div><h3>Lightway Homes Lead System</h3><p>A property journey that captures budget and timeline, scores lead fit, assigns staff, and routes enquiries into an accountable pipeline.</p><div class="project-stack"><span>CRM</span><span>AI scoring</span><span>Automation</span></div><a href="https://github.com/MICHEALSHOE2000/lightway" target="_blank" rel="noreferrer">View repository ↗</a></div>
+              <div class="project-body"><div class="project-label"><span>Real estate</span><b>CRM workflow</b></div><h3>Lightway Homes Lead System</h3><p>A property journey that combines budget, timeline, and browsing signals; explains lead fit; drafts the next reply; and flags uncertain cases for a person.</p><div class="project-stack"><span>CRM</span><span>Written rationale</span><span>Human routing</span></div><a href="https://github.com/MICHEALSHOE2000/lightway" target="_blank" rel="noreferrer">View repository ↗</a></div>
             </article>
 
             <article class="project-card reveal">
@@ -203,7 +317,7 @@
             <article><span>Acquisition</span><div><b>Google Ads</b><b>Meta Ads</b><b>Keyword research</b><b>Offer strategy</b></div></article>
             <article><span>Conversion</span><div><b>HTML/CSS/JS</b><b>React</b><b>Next.js</b><b>Tailwind</b><b>CRO</b></div></article>
             <article><span>Measurement</span><div><b>GA4</b><b>Google Tag Manager</b><b>Clarity</b><b>Event design</b></div></article>
-            <article><span>Operations</span><div><b>Airtable</b><b>Google Sheets</b><b>Make</b><b>n8n</b><b>Zapier</b></div></article>
+            <article><span>Operations</span><div><b>Airtable</b><b>Google Sheets</b><b>Make</b><b>n8n</b><b>AI guardrails</b><b>Revenue reporting</b></div></article>
           </div>
         </div>
       </section>
@@ -252,7 +366,7 @@
     </main>
 
     <footer>
-      <div class="shell footer-grid"><div><a class="logo footer-logo" href="#top"><span>MA</span><b>/</b></a><p>Growth marketing and lead systems, built end to end.</p></div><div><span>Navigate</span><a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a></div><div><span>Connect</span><a href="mailto:michealderinto6@gmail.com">Email</a><a href="tel:+13024717802">+1 302 471 7802</a><a href="https://github.com/MICHEALSHOE2000" target="_blank" rel="noreferrer">GitHub</a></div><div class="footer-end"><span>© <b data-year></b> Micheal Aderinto</span><a href="#top">Back to top ↑</a></div></div>
+      <div class="shell footer-grid"><div><a class="logo footer-logo" href="#top"><span>MA</span><b>/</b></a><p>Growth marketing and lead systems, built end to end.</p></div><div><span>Navigate</span><a href="#services">Services</a><a href="#work">Work</a><a href="#lab">Live proof</a><a href="#about">About</a></div><div><span>Connect</span><a href="mailto:michealderinto6@gmail.com">Email</a><a href="tel:+13024717802">+1 302 471 7802</a><a href="https://github.com/MICHEALSHOE2000" target="_blank" rel="noreferrer">GitHub</a></div><div class="footer-end"><span>© <b data-year></b> Micheal Aderinto</span><a href="#top">Back to top ↑</a></div></div>
     </footer>
   </body>
 </html>
